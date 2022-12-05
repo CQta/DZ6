@@ -1,26 +1,16 @@
-﻿int[] GetArray(int m) 
+﻿void Get_Dot(double k1, double k2, double b1, double b2)
 {
-    int[] result = new int[m];
-
-    for (int i = 0; i < m; i++)
-    {
-        Console.Write("Введите цисло: ");
-        result[i] = int.Parse(Console.ReadLine()!);
-    }
-
-    return result;
-}
-
-void PrintArray(int[] inArray)
-{
-    for (int i = 0; i < inArray.GetLength(0); i++)
-    {
-         Console.Write($"{inArray[i]}\t ");
-    }
+    Console.WriteLine("X = " + (b2-b1)/(k1-k2));
+    Console.WriteLine("Y = " + (k2*((b2-b1)/(k1-k2))+b2));    
 }
 
 Console.Clear();
-Console.Write("Введите кол-во элементов: ");
-int rows = int.Parse(Console.ReadLine()!);
-int[] array = GetArray(rows);
-PrintArray(array);
+Console.Write("Введите k1: ");
+double k1 = double.Parse(Console.ReadLine()!);
+Console.Write("Введите k2: ");
+double k2 = double.Parse(Console.ReadLine()!);
+Console.Write("Введите b1: ");
+double b1 = double.Parse(Console.ReadLine()!);
+Console.Write("Введите b2: ");
+double b2 = double.Parse(Console.ReadLine()!);
+Get_Dot(k1, k2, b1, b2);
